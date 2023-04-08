@@ -39,6 +39,18 @@
         const newEmployee = { ...employee, id };
 
         this.employees = [...this.employees, newEmployee];
+      },
+      deleteEmployee(id) {
+        this.employees = this.employees.filter(
+          employee => employee.id !== id
+        )
+      },
+      editEmployee(id, updatedEmployee) {
+        this.employees = this.employees.map(
+          employee => employee.id === id 
+            ? updatedEmployee 
+            : employee
+        )
       }
     }
   }
@@ -49,11 +61,15 @@
     <h1>Employees</h1>
 
     <EmployeeForm @add:employee="addEmployee" />
-    <EmployeeTable v-bind:employees="employees" />
+    <EmployeeTable 
+      v-bind:employees="employees" 
+      @delete:employee="deleteEmployee"
+      @edit:employee="editEmployee"
+    />
   </div>
 </template>
 
-<style scoped>
+<style>
   button {
     background: #009435;
     border: 1px solid #009435;
