@@ -80,6 +80,27 @@
     margin-bottom: 2rem;
   }
 
+  label {
+    font-weight: 600;
+    max-width: 100%;
+    display: block;
+    margin: 1rem 0 0.5rem;
+  }
+
+  [type='text'] {
+    display: block;
+    border: 1px solid #dedede;
+    border-radius: 4px;
+    padding: 0.75rem;
+    outline: none;
+    background: transparent;
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+    width: 100%;
+    max-width: 100%;
+    line-height: 1;
+  }
+
   [class*='-message'] {
     font-weight: 500;
   }

@@ -57,25 +57,39 @@
 </script>
 
 <template>
-  <div id="app" class="small-container">
-    <h1>Employees</h1>
+  <h1>Employees</h1>
 
-    <EmployeeForm @add:employee="addEmployee" />
-    <EmployeeTable 
-      v-bind:employees="employees" 
-      @delete:employee="deleteEmployee"
-      @edit:employee="editEmployee"
-    />
-  </div>
+  <EmployeeForm @add:employee="addEmployee" />
+  <EmployeeTable 
+    v-bind:employees="employees" 
+    @delete:employee="deleteEmployee"
+    @edit:employee="editEmployee"
+  />
 </template>
 
 <style>
   button {
+    display: inline-block;
+    border-radius: 4px;
     background: #009435;
     border: 1px solid #009435;
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 1rem;
+    text-transform: none;
+    padding: 0.75rem 1.25rem;
+    margin: 0 0 0.5rem 0;
+    vertical-align: middle;
+    text-align: center;
+    cursor: pointer;
+    text-decoration: none;
+    line-height: 1;
   }
 
-  .small-container {
-    max-width: 680px;
+  button:hover {
+    background: #32a95d;
+    border: 1px solid #32a95d;
+    color: #ffffff;
+    text-decoration: none;
   }
 </style>

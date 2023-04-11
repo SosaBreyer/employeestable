@@ -64,7 +64,32 @@
 </script>
 
 <style scoped>
+  table {
+    margin: 0 0 1.5rem 0;
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  thead th {
+    border-bottom: 2px solid #dedede;
+  }
+
+  th, td {
+    text-align: left;
+    padding: 0.5rem;
+  }
+
+  td {
+    border-bottom: 1px solid #dedede;
+  }
+
   button {
     margin: 0 0.5rem 0 0;
+  }
+
+  button:last-child {
+    margin-right: 0;
   }
 </style>
